@@ -1,0 +1,52 @@
+.alert {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 2;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+
+  &.animated {
+    animation: animateLoading 1s ease-in-out 1;
+  }
+
+  p {
+    line-height: 22px;
+  }
+
+  i {
+    color: #fb0000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font: 30px 'Tahoma';
+    cursor: pointer;
+    transition: opacity .5s ease;
+
+    &:hover {opacity: .7;}
+  }
+
+  .btn {
+    margin: 15px 0 30px;
+    box-shadow: none;
+  }
+}
+
+
+@keyframes animateLoading {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
